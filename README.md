@@ -17,13 +17,13 @@ Here are the steps:
 3. Import Enigmis to a Python file
 4. Use the Functions
 
-## Functions
+## Cipher Functions
 After you downloaded the repository and imported it, use can use the functions.
 There are three ciphers in the program. If you want to encrypt a keyword with one of the ciphers do this:
 
 ------------------------------------------------------------------------------------------------------------
 
-### Caesar Cipher
+### 1. Caesar Cipher
 If you want to encrypt with a Caesar Cipher you can use this function:
 
 `Caesar.Encrypt(msg="BluePoo", shift=2)`
@@ -37,7 +37,7 @@ To decrypt type this:
 
 ------------------------------------------------------------------------------------------------------------
 
-### Vigenère Cipher
+### 2. Vigenère Cipher
 To encrypt with a Vigenère Cipher you can use this function:
 
 `Vigen.Encrypt(msg="GooLookLikePoo", key="BluePoo")`
@@ -51,7 +51,7 @@ To decrypt type this:
 
 ------------------------------------------------------------------------------------------------------------
 
-### One Time Pad Cipher
+### 3. One Time Pad Cipher
 To encrypt with a One Time Pad Cipher you can use this function:
 
 `OTpad.Encrypt(msg="GooLookLikePoo", Kylngth=30, shwky=True)`
