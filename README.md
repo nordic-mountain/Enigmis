@@ -3,7 +3,6 @@ Enigmis is cipher program that Encrypts and Decrypts different ciphers.
 The cipher currently includes the following encryption programs:
 * Caesar Cipher
 * Vigenère Cipher
-
 * One time pad Cipher
 
 ## Requirements
@@ -21,6 +20,8 @@ Here are the steps:
 ## Commands
 After you downloaded the repository and imported it, you can use the functions.
 There are three ciphers in the program. If you want to encrypt a keyword with one of the ciphers do this:
+
+------------------------------------------------------------------------------------------------------------
 
 ### Caesar Cipher
 If you want to encrypt with a Caesar Cipher you can you this function:
@@ -50,4 +51,18 @@ To decrypt type this:
 
 ------------------------------------------------------------------------------------------------------------
 
-###
+### One Time Pad Cipher
+To encrypt with a One Time Pad Cipher you can you this function:
+
+`OTpad.Encrypt(msg="GooLookLikePoo", Kylngth=30, shwky=True)`
+
+The `msg` pram is your string message and the `Kylngth` is the length of the key in the cipher, and lastly `shwky` will show the key.
+
+
+To decrypt type this:
+
+`OTpad.Decrypt(msg=(The msg), key="qwdftnvdktndjtmdxopqsarebcvhd")`
+------------------------------------------------------------------------------------------------------------
+## Creators
+
+* TheTechyKid
