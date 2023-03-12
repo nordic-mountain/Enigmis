@@ -1,4 +1,5 @@
-![My project-1 - 2023-03-12T170527 966](https://user-images.githubusercontent.com/111663675/224576541-05d49d0e-60da-4979-ae54-88ef48716114.png)
+![My project-1 - 2023-03-12T170659 628](https://user-images.githubusercontent.com/111663675/224576658-daae1437-8e45-4577-bd5b-938d14c9ea2a.png)
+
 
 # Enigmis
 Enigmis is cipher program that Encrypts and Decrypts different ciphers.
