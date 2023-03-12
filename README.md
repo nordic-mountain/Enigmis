@@ -62,6 +62,7 @@ The `msg` pram is your string message and the `Kylngth` is the length of the key
 To decrypt type this:
 
 `OTpad.Decrypt(msg=(The msg), key="qwdftnvdktndjtmdxopqsarebcvhd")`
+
 ------------------------------------------------------------------------------------------------------------
 ## Creators
 
