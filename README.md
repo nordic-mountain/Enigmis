@@ -17,7 +17,7 @@ Here are the steps:
 3. Import Enigmis to a Python file
 4. Use the Functions
 
-## Commands
+## Functions
 After you downloaded the repository and imported it, you can use the functions.
 There are three ciphers in the program. If you want to encrypt a keyword with one of the ciphers do this:
 
