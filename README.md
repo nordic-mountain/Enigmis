@@ -64,6 +64,9 @@ To decrypt type this:
 `OTpad.Decrypt(msg=(The msg), key="qwdftnvdktndjtmdxopqsarebcvhd")`
 
 ------------------------------------------------------------------------------------------------------------
+## Info
+For more information checkout the wiki.
+
 ## Creators
 
 * TheTechyKid
