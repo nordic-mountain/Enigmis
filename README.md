@@ -18,13 +18,13 @@ Here are the steps:
 4. Use the Functions
 
 ## Functions
-After you downloaded the repository and imported it, you can use the functions.
+After you downloaded the repository and imported it, use can use the functions.
 There are three ciphers in the program. If you want to encrypt a keyword with one of the ciphers do this:
 
 ------------------------------------------------------------------------------------------------------------
 
 ### Caesar Cipher
-If you want to encrypt with a Caesar Cipher you can you this function:
+If you want to encrypt with a Caesar Cipher you can use this function:
 
 `Caesar.Encrypt(msg="BluePoo", shift=2)`
 
@@ -38,7 +38,7 @@ To decrypt type this:
 ------------------------------------------------------------------------------------------------------------
 
 ### Vigenère Cipher
-To encrypt with a Vigenère Cipher you can you this function:
+To encrypt with a Vigenère Cipher you can use this function:
 
 `Vigen.Encrypt(msg="GooLookLikePoo", key="BluePoo")`
 
@@ -52,7 +52,7 @@ To decrypt type this:
 ------------------------------------------------------------------------------------------------------------
 
 ### One Time Pad Cipher
-To encrypt with a One Time Pad Cipher you can you this function:
+To encrypt with a One Time Pad Cipher you can use this function:
 
 `OTpad.Encrypt(msg="GooLookLikePoo", Kylngth=30, shwky=True)`
 
