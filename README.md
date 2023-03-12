@@ -29,6 +29,7 @@ If you want to encrypt with a Caesar Cipher you can you this function:
 
 The `msg` pram is your string message and the `shift` is how much we would shift each letter in the message.
 
+
 To decrypt type this:
 
 `Caesar.Decrypt(msg="DnwgRqq", shift=2)`
@@ -39,6 +40,7 @@ To encrypt with a Vigenère Cipher you can you this function:
 `Vigen.Encrypt(msg="GooLookLikePoo", key="BluePoo")`
 
 The `msg` pram is your string message and the `key` is the key in the cipher.
+
 
 To decrypt type this:
 
