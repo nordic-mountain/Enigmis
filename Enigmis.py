@@ -1,6 +1,8 @@
 # Enigmis.py
 
-import random
+"""A cipher program that Encrypts and Decrypts different ciphers."""
+
+import secrets
 import string
 
 class Caesar():
@@ -130,9 +132,8 @@ OTpad.Decrypt((your msg), "BluePoo")
 """
     
     def randomKey(length):
-        n = length
-        random_string = ''.join(random.choices(string.ascii_letters, k=n))
-        return random_string
+        alphabet = string.ascii_letters
+        return ''.join(secrets.choice(alphabet) for i in range(length))
     
     def Encrypt(msg, Kylngth, shwky):
         msg = msg
@@ -141,35 +142,40 @@ OTpad.Decrypt((your msg), "BluePoo")
         Kylngth = Kylngth
         key = OTpad.randomKey(Kylngth)
         
-        if isinstance(msg, str):
-            for keys in key:
-                keytonumber = ord(keys)
-            for messages in msg:
-                messagex = ord(messages) + keytonumber
-                messagey = chr(messagex)
-                output += messagey
-
-            if shwky == True:
-                print(key)
-                return output
-            else:
-                return output
+        # sanitize the input
+        if not isinstance(msg, str) or not msg.isalpha():
+            raise ValueError("Input Error: Encrypted message must be a string containing only letters")
+        if not isinstance(Kylngth, int) or Kylngth <= 0:
+            raise ValueError("Input Error: Key length must be a positive integer")
+        
+        for keys in key:
+            keytonumber = ord(keys)
+        for messages in msg:
+            messagex = ord(messages) + keytonumber
+            messagey = chr(messagex)
+            output += messagey
+        if shwky == True:
+            print(key)
+            return output
         else:
-            print("Input Error: Type is not a 'str'")
+            return output
     
     def Decrypt(msg, key):
         msg = msg
         output = ""
         key = key
 
-        if isinstance(msg, str):
-            for keys in key:
-                keytonumber = ord(keys)
-            for messages in msg:
-                messagex = ord(messages) - keytonumber
-                messagey = chr(messagex)
-                output += messagey
+        # sanitize the input
+        if not isinstance(msg, str) or not msg.isalpha():
+            raise ValueError("Input Error: Encrypted message must be a string containing only letters")
+        if not isinstance(key, str) or not key.isalpha():
+            raise ValueError("Input Error: Key must be a string containing only letters")
 
-            return output
-        else:
-            print("Input Error: Type is not a 'str'")
+        for keys in key:
+            keytonumber = ord(keys)
+        for messages in msg:
+            messagex = ord(messages) - keytonumber
+            messagey = chr(messagex)
+            output += messagey
+
+        return output
