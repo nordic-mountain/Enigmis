@@ -68,7 +68,7 @@ To decrypt type this:
 
 ------------------------------------------------------------------------------------------------------------
 ## Info
-For more information checkout the wiki.
+For more information checkout the [wiki](https://github.com/TheTechyKid/Enigmis/wiki).
 
 ## Creators
 
