@@ -26,34 +26,36 @@ Example:
 Caesar.Decrypt((your msg), 3)
 """
     def Encrypt(msg, shift):
-        shift = shift
-        msg = msg
         output = ""
         
-        if isinstance(msg, str):
-            for letter in msg:
-                x = ord(letter)+shift
-                y = chr(x)
+        # sanitize the input
+        if not isinstance(msg, str):
+            raise ValueError("Input Error: Encrypted message must be a string containing only letters, no spaces")
+        if not isinstance(shift, int):
+            raise ValueError("Input Error: Key must be a 'int'")
+        
+        for letter in msg:
+            x = ord(letter)+shift
+            y = chr(x)
 
-                output += y
-            return output
-        else:
-            print("Input Error: Type is not a 'str'")
+            output += y
+        return output
     
     def Decrypt(msg, shift):
-        shift = shift
-        msg = msg
         output = ""
         
-        if isinstance(msg, str):
-            for letter in msg:
-                x = ord(letter)-shift
-                y = chr(x)
+        # sanitize the input
+        if not isinstance(msg, str):
+            raise ValueError("Input Error: Encrypted message must be a string containing only letters, no spaces")
+        if not isinstance(shift, int):
+            raise ValueError("Input Error: Key must be a 'int'")
+        
+        for letter in msg:
+            x = ord(letter)-shift
+            y = chr(x)
                 
-                output += y
-            return output
-        else:
-            print("Input Error: Type is not a 'str'")
+            output += y
+        return output
 
 class Vigen():
     """The Vigenère cipher
@@ -77,37 +79,39 @@ Vigen.Decrypt((your msg), 3)
 """
     
     def Encrypt(msg, key):
-        message = msg
-        key = key
         output = ""
 
-        if isinstance(msg, str):
-            for keys in key:
-                keytonumber = ord(keys)
-            for messages in message:
-                messagex = ord(messages) + keytonumber
-                messagey = chr(messagex)
-
-                output += messagey
-            return output
-        else:
-            print("Input Error: Type is not a 'str'")
+        # sanitize the input
+        if not isinstance(msg, str):
+            raise ValueError("Input Error: Encrypted message must be a string containing only letters, no spaces")
+        if not isinstance(key, str):
+            raise ValueError("Input Error: Key must be a 'str'")
         
+        for keys in key:
+            keytonumber = ord(keys)
+        for messages in message:
+            messagex = ord(messages) + keytonumber
+            messagey = chr(messagex)
+
+            output += messagey
+        return output
+ 
     def Decrypt(msg, key):
-        message = msg
-        key = key
         output = ""
 
-        if isinstance(msg, str):
-            for keys in key:
-                keytonumber = ord(keys)
-            for messages in message:
-                messagex = ord(messages) - keytonumber
-                messagey = chr(messagex)
-                output += messagey
-            return output
-        else:
-            print("Input Error: Type is not a 'str'")
+        # sanitize the input
+        if not isinstance(msg, str):
+            raise ValueError("Input Error: Encrypted message must be a string containing only letters, no spaces")
+        if not isinstance(key, str):
+            raise ValueError("Input Error: Key must be a 'str'")
+        
+        for keys in key:
+            keytonumber = ord(keys)
+        for messages in message:
+            messagex = ord(messages) - keytonumber
+            messagey = chr(messagex)
+            output += messagey
+        return output
 
 class OTpad():
     """OTpad (One-time-pad) cipher
@@ -136,14 +140,11 @@ OTpad.Decrypt((your msg), "BluePoo")
         return ''.join(secrets.choice(alphabet) for i in range(length))
     
     def Encrypt(msg, Kylngth, shwky):
-        msg = msg
-        shwky = shwky
         output = ""
-        Kylngth = Kylngth
         key = OTpad.randomKey(Kylngth)
         
         # sanitize the input
-        if not isinstance(msg, str) or not msg.isalpha():
+        if not isinstance(msg, str):
             raise ValueError("Input Error: Encrypted message must be a string containing only letters")
         if not isinstance(Kylngth, int) or Kylngth <= 0:
             raise ValueError("Input Error: Key length must be a positive integer")
@@ -160,15 +161,13 @@ OTpad.Decrypt((your msg), "BluePoo")
         else:
             return output
     
-    def Decrypt(msg, key):
-        msg = msg
+    def Decrypt(msg, key): 
         output = ""
-        key = key
 
         # sanitize the input
-        if not isinstance(msg, str) or not msg.isalpha():
+        if not isinstance(msg, str):
             raise ValueError("Input Error: Encrypted message must be a string containing only letters")
-        if not isinstance(key, str) or not key.isalpha():
+        if not isinstance(key, str):
             raise ValueError("Input Error: Key must be a string containing only letters")
 
         for keys in key:
@@ -179,3 +178,4 @@ OTpad.Decrypt((your msg), "BluePoo")
             output += messagey
 
         return output
+
