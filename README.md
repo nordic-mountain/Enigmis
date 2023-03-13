@@ -29,42 +29,54 @@ There are three ciphers in the program. If you want to encrypt a keyword with on
 ### 1. Caesar Cipher
 If you want to encrypt with a Caesar Cipher you can use this function:
 
-`Caesar.Encrypt(msg="BluePoo", shift=2)`
+``` python
+Caesar.Encrypt(msg="BluePoo", shift=2)
+```
 
 The `msg` pram is your string message and the `shift` is how much we would shift each letter in the message.
 
 
 To decrypt type this:
 
-`Caesar.Decrypt(msg="DnwgRqq", shift=2)`
+``` python
+Caesar.Decrypt(msg="DnwgRqq", shift=2)
+```
 
 ------------------------------------------------------------------------------------------------------------
 
 ### 2. Vigenère Cipher
 To encrypt with a Vigenère Cipher you can use this function:
 
-`Vigen.Encrypt(msg="GooLookLikePoo", key="BluePoo")`
+``` python
+Vigen.Encrypt(msg="GooLookLikePoo", key="BluePoo")
+```
 
 The `msg` pram is your string message and the `key` is the key in the cipher.
 
 
 To decrypt type this:
 
-`Vigen.Decrypt(msg="¶ÞÞ»ÞÞÚ»ØÚÔ¿ÞÞ", key="BluePoo")`
+``` python
+Vigen.Decrypt(msg="¶ÞÞ»ÞÞÚ»ØÚÔ¿ÞÞ", key="BluePoo")
+```
 
 ------------------------------------------------------------------------------------------------------------
 
 ### 3. One Time Pad Cipher
 To encrypt with a One Time Pad Cipher you can use this function:
 
-`OTpad.Encrypt(msg="GooLookLikePoo", Kylngth=30, shwky=True)`
+``` python
+OTpad.Encrypt(msg="GooLookLikePoo", Kylngth=30, shwky=True)
+```
 
 The `msg` pram is your string message and the `Kylngth` is the length of the key in the cipher, and lastly `shwky` will show the key.
 
 
 To decrypt type this:
 
-`OTpad.Decrypt(msg=(The msg), key="qwdftnvdktndjtmdxopqsarebcvhd")`
+``` python
+OTpad.Decrypt(msg=(The msg), key="qwdftnvdktndjtmdxopqsarebcvhd")
+```
 
 ------------------------------------------------------------------------------------------------------------
 ## Info
